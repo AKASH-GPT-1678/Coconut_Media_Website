@@ -5,7 +5,8 @@ import Logo from "./mylogo.png"
 import { MdAddCall } from "react-icons/md";
 import { motion } from "framer-motion"
 import Groupd from "../../../public/groupd.png"
-import { div } from 'framer-motion/client';
+
+import { MyImages } from '../myasset/myprofile';
 export const Header = () => {
   const services = [
     {
@@ -78,7 +79,7 @@ export const Header = () => {
         <div className='h-screen w-full flex flex-row  justify-center border-2 border-black'>
 
 
-          <div className='w-fit h-fit border-2 border-black mt-40 p-10 max-w-[1200px] flex flex-col gap-10 items-center'>
+          <div className='w-fit h-fit mt-40 p-10 max-w-[1200px] flex flex-col gap-10 items-center'>
 
 
             <motion.div
@@ -129,8 +130,8 @@ export const Header = () => {
           <div className='w-[40%] bg-green-100 -mr-60'></div>
           <Image src={Groupd} alt="logo" width={500} height={400} className='mt-20' />
 
-          <div className='w-[60%] bg-white  '>
-            <section className="px-6 py-12 md:py-16 bg-white">
+          <div className='w-fit bg-white  '>
+            <section className="px-6 py-12 md:py-16 bg-white ">
               <div className="max-w-3xl mx-auto">
                 <p className="text-sm uppercase tracking-wider text-gray-500 mb-2">About Us</p>
                 <h2 className="text-3xl md:text-4xl font-bold text-black leading-snug mb-6">
@@ -143,20 +144,29 @@ export const Header = () => {
                   that elevate your brand and deliver<br />
                   quantifiable results.
                 </p>
-                <p className="text-gray-700 text-sm leading-relaxed">
+                <p className="text-gray-700 text-sm max-w-xl leading-relaxed">
                   We serve diverse media and entertainment needs, expanding across Creative Brand Solutions,
                   Digital Marketing, Motion Pictures, Events, and more, with an exponentially growing client base.
                 </p>
+
               </div>
+
             </section>
 
 
 
+
+          </div>
+          <div>
+            <h1 className=' rotate-90 origin-top-left text-8xl ml-10'>COCONUT</h1>
           </div>
 
 
 
+
+
         </div>
+
 
       </div>
       <div className='bg-black'>
@@ -212,22 +222,38 @@ export const Header = () => {
 
         </div>
 
-        <div className='flex flex-col gap-4 justify-center items-center underline'>
+        <div className='flex flex-col gap-4 justify-center items-center '>
           <p>Explore our craft shaped with passion</p>
           <h1 className='text-4xl font-bold'>Work Showcase</h1>
-          <div className='flex flex-row gap-10'>
-            <p>Creative Solutions</p>
-            <p>Digital Solutions</p>
-            <p>Events & Activations</p>
+          <div className='flex flex-row gap-10 font-semibold cursor-pointer'>
+            <p className="hover:underline">Creative Solutions</p>
+            <p className="hover:underline">Digital Solutions</p>
+            <p className="hover:underline">Events & Activations</p>
 
 
 
           </div>
 
         </div>
+        <div>
+          <div className="grid grid-cols-4  gap-5 max-w-[1000px]">
+            <Image src={MyImages[0]} alt="image1" className="object-fill h-full w-full" />
+            <Image src={MyImages[1]} alt="image2" className="object-fill h-full w-full" />
+            <Image src={MyImages[2]} alt="image3" className="object-fill h-full w-full" />
+            <Image src={MyImages[3]} alt="image4" className="object-fill h-full w-full" />
+          </div>
+
+        </div>
+
+
 
       </div>
+       <div>
+        <div className='bg-green-300'>
 
+        </div>
+        <div></div>
+       </div>
 
     </div>
   )
