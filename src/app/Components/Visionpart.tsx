@@ -26,7 +26,7 @@ const Visionpart = () => {
                 </div>
 
             </div>
-            <div className='h-[40%]' style={{ backgroundImage: `url(${'https://storage.googleapis.com/management_324/illusion.jpg'})` }}>
+            <div className='h-[40%]' style={{ backgroundImage: `url(${'https://storage.googleapis.com/management_324/wooden.jpg' })` }}>
 
 
                 <div className='flex flex-row items-center justify-center gap-5 '>

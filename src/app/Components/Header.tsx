@@ -5,9 +5,55 @@ import Logo from "./mylogo.png"
 import { MdAddCall } from "react-icons/md";
 import { motion } from "framer-motion"
 import Groupd from "../../../public/groupd.png"
-
+import { useRouter } from 'next/navigation';
 import { MyImages } from '../myasset/myprofile';
+import { Companies } from '../myasset/companies/comapnies';
 export const Header = () => {
+  const router = useRouter();
+
+  const Myurls = [
+    'https://storage.googleapis.com/management_324/team1.jpg',
+    'https://storage.googleapis.com/management_324/team2.jpg',
+    'https://storage.googleapis.com/management_324/team3.jpg'
+
+  ]
+
+  const [source, setSource] = React.useState(Myurls[0])
+
+
+  React.useEffect(() => {
+    let current = 0
+
+
+    const interval = setInterval(() => {
+      if (current = 2) {
+        current = 0
+
+      }
+      else {
+        current + 1
+        setSource(Myurls[current])
+
+
+      }
+
+
+    }, 3000
+    )
+
+
+    return () => clearInterval(interval);
+
+
+
+
+
+
+
+
+
+
+  }, [])
   const services = [
     {
       title: 'Integrated Creative Solutions',
@@ -44,12 +90,17 @@ export const Header = () => {
     },
   ];
 
+
+
+
+
+
   return (
 
     <div>
-      <div style={{ backgroundImage: "" }}>
+      <div style={{ backgroundImage: `url(${source})`, backdropFilter: 'blur(5px)', backgroundSize: 'cover', backfaceVisibility: 'hidden' }}>
 
-        <div className='flex flex-row gap-5 border-2 border-black h-fit 0 p-8 items-center justify-between'>
+        <div className='flex flex-row gap-5  h-fit 0 p-8 items-center justify-between'>
 
 
 
@@ -58,11 +109,13 @@ export const Header = () => {
             <Image src={Logo} alt="logo" width={120} height={120} />
 
             <ul className='flex flex-row gap-14 text-white ml-12'>
-              <li>Home</li>
-              <li>About</li>
-              <li>Verticles</li>
-              <li>Blog</li>
-              <li>Contact</li>
+              <li className="uppercase cursor-pointer" onClick={() => router.push('/')}>Home</li>
+              <li className="uppercase cursor-pointer">About us</li>
+              <li className="uppercase cursor-pointer">Verticles</li>
+              <li className="uppercase cursor-pointer" onClick={() => router.push('/blogs')}>Blog</li>
+              <li className="uppercase cursor-pointer" onClick={() => router.push('/careers')}>Careers</li>
+
+              <li className="uppercase cursor-pointer" onClick={() => router.push('/contactus')}>Contact</li>
 
             </ul>
           </div>
@@ -76,7 +129,7 @@ export const Header = () => {
           </div>
         </div>
         <hr />
-        <div className='h-screen w-full flex flex-row  justify-center border-2 border-black'>
+        <div className='h-screen w-full flex flex-row  justify-center' >
 
 
           <div className='w-fit h-fit mt-40 p-10 max-w-[1200px] flex flex-col gap-10 items-center'>
@@ -88,7 +141,7 @@ export const Header = () => {
               transition={{ duration: 0.75 }}
 
             >
-              <h1 className='text-xl font-semibold'>Welcome to Coconut Media Group</h1>
+              <h1 className='text-xl font-semibold text-white'>Welcome to Coconut Media Group</h1>
 
 
 
@@ -105,9 +158,9 @@ export const Header = () => {
 
 
             >
-              <h1 className='text-8xl'>CRAFTING CAMPAIGNS</h1>
-              <h1 className='text-8xl'>CREATING EVENTS</h1>
-              <h1 className='text-8xl'>CREATING MAGIC</h1>
+              <h1 className='text-8xl text-white'>CRAFTING CAMPAIGNS</h1>
+              <h1 className='text-8xl text-white'>CREATING EVENTS</h1>
+              <h1 className='text-8xl text-white'>CREATING MAGIC</h1>
 
 
             </motion.div>
@@ -122,13 +175,12 @@ export const Header = () => {
 
       </div>
       <div>
-        <div className='h-[700px] w-full flex flex-row mb-20'>
+        <div className='h-[700px] w-full flex flex-row mb-20 justify-between relative'>
+          <div className='p-16 bg-green-400 w-[30%] flex-row'>
+            <Image src={Groupd} alt="logo" width={800} height={800} className=' absolute h-[600px] w-[800px] rounded-2xl' />
+          </div>
 
-
-
-
-          <div className='w-[40%] bg-green-100 -mr-60'></div>
-          <Image src={Groupd} alt="logo" width={500} height={400} className='mt-20' />
+      
 
           <div className='w-fit bg-white  '>
             <section className="px-6 py-12 md:py-16 bg-white ">
@@ -213,48 +265,55 @@ export const Header = () => {
         </div>
 
       </div>
-      <div className='w-full flex-col justify-center mx-auto bg-red-100'>
-        <div className='border-2 border-black flex flex-col justify-center items-center'>
-          <p>They trusted us. You can as well.</p>
-          <p className='text-5xl font-semibold'>Our Esteemed Clients</p>
+     <div className="w-full flex flex-col items-center justify-center bg-white">
+
+  {/* Esteemed Clients Section */}
+  <div className="w-full flex flex-col items-center justify-center py-10 border-b-2 border-gray-300">
+    <p>They trusted us. You can as well.</p>
+    <p className="text-5xl font-semibold">Our Esteemed Clients</p>
 
 
+    <div className='flex flex-row flex-wrap gap-5 max-w-[1200px] justify-center mt-10'>
+      {Companies.map((company, index) => (
+        <Image
+          key={index}
+          src={company}
+          alt={"tasiwr"}
+          className="object-contain h-[100px] w-[200px] p-4"
+        />
+      ))}
+    </div>
+  </div>
 
-        </div>
+  {/* Work Showcase Section */}
+  <div className="w-full flex flex-col items-center justify-center py-10">
+    <p>Explore our craft shaped with passion</p>
+    <h1 className="text-4xl font-bold">Work Showcase</h1>
 
-        <div className='flex flex-col gap-4 justify-center items-center '>
-          <p>Explore our craft shaped with passion</p>
-          <h1 className='text-4xl font-bold'>Work Showcase</h1>
-          <div className='flex flex-row gap-10 font-semibold cursor-pointer'>
-            <p className="hover:underline">Creative Solutions</p>
-            <p className="hover:underline">Digital Solutions</p>
-            <p className="hover:underline">Events & Activations</p>
+    <div className="flex flex-row gap-10 font-semibold cursor-pointer mt-4 mb-10">
+      <p className="hover:underline">Creative Solutions</p>
+      <p className="hover:underline">Digital Solutions</p>
+      <p className="hover:underline">Events & Activations</p>
+    </div>
 
+    <div className="flex flex-row flex-wrap gap-5 max-w-[1200px] justify-center">
+      <Image src={MyImages[0]} alt="image1" className="object-fill h-[300px] w-[250px]" />
+      <Image src={MyImages[1]} alt="image2" className="object-fill h-[300px] w-[250px]" />
+      <Image src={MyImages[2]} alt="image3" className="object-fill h-[300px] w-[250px]" />
+      <Image src={MyImages[3]} alt="image4" className="object-fill h-[300px] w-[250px]" />
+      <Image src={MyImages[4]} alt="image5" className="object-fill h-[300px] w-[250px]" />
+      <Image src={MyImages[5]} alt="image6" className="object-fill h-[300px] w-[250px]" />
+      <Image src={MyImages[6]} alt="image7" className="object-fill h-[300px] w-[520px]" />
+      <Image src={MyImages[7]} alt="image8" className="object-fill h-[300px] w-[250px]" />
+      <Image src={MyImages[8]} alt="image9" className="object-fill h-[300px] w-[250px]" />
+      <Image src={MyImages[9]} alt="image10" className="object-fill h-[300px] w-[250px]" />
+       
+    </div>
+  </div>
 
+</div>
 
-          </div>
-
-        </div>
-        <div>
-          <div className="grid grid-cols-4  gap-5 max-w-[1000px]">
-            <Image src={MyImages[0]} alt="image1" className="object-fill h-full w-full" />
-            <Image src={MyImages[1]} alt="image2" className="object-fill h-full w-full" />
-            <Image src={MyImages[2]} alt="image3" className="object-fill h-full w-full" />
-            <Image src={MyImages[3]} alt="image4" className="object-fill h-full w-full" />
-          </div>
-
-        </div>
-
-
-
-      </div>
-       <div>
-        <div className='bg-green-300'>
-
-        </div>
-        <div></div>
-       </div>
-
+     
     </div>
   )
 }

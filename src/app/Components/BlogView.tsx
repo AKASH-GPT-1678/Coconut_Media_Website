@@ -6,7 +6,7 @@ import { i } from 'framer-motion/client'
 import { FaFolderOpen } from "react-icons/fa";
 export const BlogView = () => {
   return (
-    <div>
+    <div className='border-2 '>
         <div className='flex flex-col lg:flex-row gap-4 mt-10 items-center justify-center '>
           {Blogs.map((item, index) => (
             <div key={index} className='w-[370px] h-[480px] rounded-2xl shadow-2xl'>
@@ -33,21 +33,20 @@ export const BlogView = () => {
           
         </div>
 
-        <div className='flex flex-row items-center justify-center mt-10 p-8 BG-GRE'>
-          <div className='bg-green-500 w-[60%] h-[280px] rounded-xl flex flex-row justify-center p-14 '>
-
-            <div className='flex flex-col font-bold text-3xl'>
-
-          
-            <p className='uppercase'>Let's Make Your Brand</p>
-            <p className='uppercase'>Unstoppable, Together!</p>
-            </div>
-          
+        <div className='flex flex-col lg:flex-row items-center gap-4 justify-between max-w-[1200px] h-[250px] mt-10 p-10 bg-green-500 mx-auto rounded-xl'>
 
 
-
+          <div className='flex flex-col text-amber-50'>
+            <p className='text-4xl font-bold'>Let's Make Your Brand</p>
+            <p className='text-4xl font-bold'>Unstoppable, Together!</p>
 
           </div>
+
+          <div className='rounded-2xl'>
+            <p className='p-6 text-lg text-white bg-black rounded-xl uppercase cursor-pointer'> Start Your story with us</p>
+          </div>
+
+        
        
         </div>
     </div>
