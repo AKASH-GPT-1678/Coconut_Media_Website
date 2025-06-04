@@ -4,6 +4,9 @@ import Image2 from './Privi-Logo-2.webp'
 import Image3 from './Renaissance-Logo-3.webp'
 import Image4 from './IAVL-logo-4.webp'
 import Image5 from './ETG-World-Logo-5.webp'
+import Blog1 from './gemini.jpg'
+import Blog2 from './creativity.jpg'
+import Blog3 from './physcho.jpg'
 
 
 export const Testimonial = [
@@ -43,3 +46,59 @@ export const Testimonial = [
     "image": Image1 
   }
 ]
+
+
+export const Blogs = [
+  {
+    "title": "WHO’S COMING FOR CHATGPT’S THRONE IN THE AGE OF AI?",
+    "date": "8 APR",
+    "category": "Blogs & Articles",
+    "description": "Artificial Intelligence (AI) is a foundational component of modern-day technology, reshaping all facets of our lives from work to...",
+    "imageUrl": "https://storage.googleapis.com/management_324/articles/chatpt.jpg"
+  },
+  {
+    "title": "WHY CREATIVITY IS THE SECRET INGREDIENT IN SUCCESSFUL...",
+    "date": "5 APR",
+    "category": "Blogs & Articles",
+    "description": "The competitive landscape of creative advertising is perpetually fast-paced; the trends evolve before you can apply them, an...",
+    "imageUrl": "https://storage.googleapis.com/management_324/articles/creativity.jpg"
+  },
+  {
+    "title": "THE PSYCHOLOGY OF ADVERTISING: WHAT MAKES CONSUMERS SAY ‘YES’",
+    "date": "1 APR",
+    "category": "Blogs & Articles",
+    "description": "Advertising may be described as the science of arresting the human intelligence long enough to get money from it.",
+    "imageUrl": "https://storage.googleapis.com/management_324/articles/advertising.jpg"
+  }
+]
+
+
+export const Jobs =[
+  {
+    "title": "Event Operations Executive",
+    "experience": "1 to 2 years",
+    "type": "Full Time"
+  },
+  {
+    "title": "Business Development Executive",
+    "experience": "1.5 to 3 years",
+    "type": "Full Time"
+  },
+  {
+    "title": "Business Development Manager",
+    "experience": "3 to 5 years",
+    "type": "Full Time"
+  },
+  {
+    "title": "Sr. Delegate Acquisition",
+    "experience": "3 to 5 years",
+    "type": "Full Time"
+  },
+  {
+    "title": "Social Media Intern",
+    "experience": "Internship",
+    "type": "Full Time"
+  }
+]
+
+
