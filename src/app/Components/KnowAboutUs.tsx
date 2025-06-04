@@ -3,7 +3,7 @@ import { FaArrowCircleLeft } from "react-icons/fa";
 import { FaArrowCircleRight } from "react-icons/fa";
 import { Testimonial } from '../testimonial/testimonial';
 import Image from 'next/image';
-import { div } from 'framer-motion/client';
+
 export const KnowAboutUs = () => {
   return (
     <div className='bg-green-100'>

@@ -31,7 +31,7 @@ export const Header = () => {
 
       }
       else {
-        current + 1
+        // current + 1
         setSource(Myurls[current])
 
 
@@ -54,6 +54,7 @@ export const Header = () => {
 
 
   }, [])
+
   const services = [
     {
       title: 'Integrated Creative Solutions',
@@ -122,7 +123,7 @@ export const Header = () => {
           <div className='flex flex-row items-center gap-2'>
             <MdAddCall className='text-white text-3xl' />
             <div className='flex flex-col'>
-              <p className='text-white text-md'>LET'S CONNECT</p>
+              <p className='text-white text-md'>LET&apos;S CONNECT</p>
               <p className='text-white'>+91 1234567890</p>
             </div>
 

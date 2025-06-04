@@ -4,7 +4,6 @@ import Logo from "./mylogo.png"
 import { MdAddCall } from "react-icons/md";
 import { Jobs } from '../testimonial/testimonial';
 import { FaClock } from "react-icons/fa";
-import { it } from 'node:test';
 import { Footer1 } from '../Components/Footer1';
 import Footer from '../Components/Footer';
 const page = () => {
@@ -15,7 +14,7 @@ const page = () => {
 
 
 
-        <div className='flex flex-row  '>
+        <div className='flex flex-row'>
           <Image src={Logo} alt="logo" width={120} height={120} />
 
           <ul className='flex flex-row gap-14 text-white ml-12'>
@@ -30,7 +29,7 @@ const page = () => {
         <div className='flex flex-row items-center gap-2'>
           <MdAddCall className='text-white text-3xl' />
           <div className='flex flex-col'>
-            <p className='text-white text-md'>LET'S CONNECT</p>
+            <p className='text-white text-md'>LET&apos;S CONNECT</p>
             <p className='text-white'>+91 1234567890</p>
           </div>
 
@@ -79,7 +78,7 @@ const page = () => {
         <button className='bg-green-600 text-white p-4 rounded-sm'>Load More</button>
 
         <div className='flex flex-row items-center justify-between w-[700px] p-6 h-[200px] bg-green-500 '>
-          <p className='uppercase'>Think you'd be a great fit?</p>
+          <p className='uppercase'>Think you&apos;d be a great fit?</p>
           <button className='bg-black text-white p-4 uppercase py-4'>Drop your resume here</button>
 
         </div>

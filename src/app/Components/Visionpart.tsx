@@ -26,19 +26,15 @@ const Visionpart = () => {
                 </div>
 
             </div>
-            <div className='h-[40%]' style={{ backgroundImage: `url(${'https://storage.googleapis.com/management_324/wooden.jpg' })` }}>
+            <div className='h-[40%] flex items-center justify-center w-full' style={{ backgroundImage: `url(${'https://storage.googleapis.com/management_324/wooden.jpg'})` }}>
 
-
-                <div className='flex flex-row items-center justify-center gap-5 '>
-
-
-
-                    <Image src={Mystudio} alt="Image 1" width={300} height={300} className='-mt-20' />
-                    <Image src={Mystudio} alt="Image 1" width={300} height={300} className='-mt-20' />
-                    <Image src={Mystudio} alt="Image 1" width={300} height={300} className='-mt-20' />
-
+                <div className='flex flex-row gap-5 max-w-[700px] items-center justify-center h-[300px] overflow-x-scroll -mt-40'>
+                    {Array.from({ length: 20 }).map((_, index) => (
+                        <div key={index} className='w-[220px] h-[300px] flex-shrink-0'>
+                            <Image src={Mystudio} alt='myimages' className='w-[200px] h-[300px]' />
+                        </div>
+                    ))}
                 </div>
-
 
 
             </div>
