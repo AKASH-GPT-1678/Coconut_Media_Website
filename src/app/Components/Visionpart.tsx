@@ -1,6 +1,12 @@
 import React from 'react'
 import Mystudio from '../testimonial/mystudio.webp'
-import Image from 'next/image'
+import Image from 'next/image';
+
+const images = [
+    "https://res.cloudinary.com/dffepahvl/image/upload/v1753692201/fbp1mriss5bshnjbddxm.jpg",
+    "https://res.cloudinary.com/dffepahvl/image/upload/v1753692201/bgug3m7runy2wh3cpuoh.jpg",
+    "https://res.cloudinary.com/dffepahvl/image/upload/v1753692201/bl0l2nbqq3m4ydwjcrxu.jpg"
+];
 const Visionpart = () => {
     return (
         <div className='h-[600px] w-full border-2 border-black'>
@@ -28,12 +34,19 @@ const Visionpart = () => {
             </div>
             <div className='h-[40%] flex items-center justify-center w-full' style={{ backgroundImage: `url(${'https://storage.googleapis.com/management_324/wooden.jpg'})` }}>
 
-                <div className='flex flex-row gap-5 max-w-[700px] items-center justify-center h-[300px] overflow-x-scroll -mt-40'>
-                    {Array.from({ length: 20 }).map((_, index) => (
-                        <div key={index} className='w-[220px] h-[300px] flex-shrink-0'>
-                            <Image src={Mystudio} alt='myimages' className='w-[200px] h-[300px]' />
+                <div className='flex flex-row gap-20  max-w-[1400px] items-center justify-center h-[300px] overflow-x-scroll -mt-40'>
+                    <div className="overflow-hidden  h-fit object-cover mx-auto rounded-xl shadow-lg">
+                        <div className="flex w-full gap-10 h-full transition-transform duration-500 ease-in-out">
+                            {images.map((img, index) => (
+                                <img
+                                    key={index}
+                                    src={img}
+                                    alt={`Slide ${index}`}
+                                    className={`w-1/3 object-cover h-full ${index % 2 == 0 ? 'skew-3' : 'skew-0'}`}
+                                />
+                            ))}
                         </div>
-                    ))}
+                    </div>
                 </div>
 
 

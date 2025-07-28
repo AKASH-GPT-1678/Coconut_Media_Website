@@ -1,3 +1,4 @@
+"use client";
 import React from 'react'
 import { FaPeopleGroup } from "react-icons/fa6";
 import { IoIosPeople } from "react-icons/io";
@@ -7,6 +8,50 @@ import Work from "../myasset/work.png"
 import Image from 'next/image';
 import Hardworking from "../myasset/hardworking.png"
 const Infopart = () => {
+  const [yearsOfExperience, setYearsOfExperience] = React.useState(0);
+  const [clientRetentionRate, setClientRetentionRate] = React.useState(0);
+  const [projectsCompleted, setProjectsCompleted] = React.useState(0);
+  const [happyClients, setHappyClients] = React.useState(0);
+
+  const upgradeWeb = (
+    yearsMax: number,
+    clientRateMax: number,
+    projectsMax: number,
+    clientsMax: number
+  ) => {
+
+
+
+  }
+
+
+
+
+
+
+
+  React.useEffect(() => {
+
+
+    for (let i = 0; i <= 10; i++) {
+      setTimeout(() => setYearsOfExperience(i), i * 100);
+    }
+
+    for (let i = 0; i <= 92; i++) {
+      setTimeout(() => setClientRetentionRate(i), i * 10);
+    }
+
+    for (let i = 0; i <= 500; i++) {
+      setTimeout(() => setProjectsCompleted(i), i * 1);
+    }
+
+    for (let i = 0; i <= 300; i++) {
+      setTimeout(() => setHappyClients(i), i * 2);
+    }
+  }, []);
+
+
+
   return (
 
     <div>
@@ -16,48 +61,50 @@ const Infopart = () => {
         <div className='grid grid-cols-2  lg:flex lg:flex-row justify-between gap-6 h-[600px] mt-20'>
 
           {/* First Block */}
-          <div className='flex flex-col items-center'>
-            <div className='flex flex-col p-4 h-fit w-fit shadow-md rounded-full bg-green-700'>
-              <FaPeopleGroup size={80} color='white' className='rounded-full p-1' />
-            </div>
-            <div className='text-center space-y-2'>
-              <p className='font-extrabold text-white text-5xl'>10 +</p>
-              <p className='font-extrabold text-white text-xxl'>Years of Experience</p>
-            </div>
-          </div>
+         {/* First Block */}
+<div className='flex flex-col items-center'>
+  <div className='flex flex-col p-4 h-fit w-fit shadow-md rounded-full bg-green-700'>
+    <FaPeopleGroup size={70} color='white' className='rounded-full p-1' />
+  </div>
+  <div className='text-center space-y-2 ml-2 mt-4'>
+    <p className='font-extrabold text-white text-4xl'>{yearsOfExperience}+</p>
+    <p className='font-extrabold text-white text-xxl'>Years of Experience</p>
+  </div>
+</div>
 
-          {/* Second Block */}
-          <div className='flex flex-col items-center'>
-            <div className='flex flex-col p-4 h-fit w-fit shadow-md rounded-full bg-green-700'>
-              <IoIosPeople size={80} color='white' className='rounded-full p-1' />
-            </div>
-            <div className='text-center space-y-2'>
-              <p className='font-extrabold text-white text-5xl'>92%</p>
-              <p className='font-extrabold text-white text-xxl'>Client Retention Rate</p>
-            </div>
-          </div>
+{/* Second Block */}
+<div className='flex flex-col items-center'>
+  <div className='flex flex-col p-4 h-fit w-fit shadow-md rounded-full bg-green-700'>
+    <IoIosPeople size={70} color='white' className='rounded-full p-1' />
+  </div>
+  <div className='text-center space-y-2 ml-2 mt-4'>
+    <p className='font-extrabold text-white text-4xl'>{clientRetentionRate}%</p>
+    <p className='font-extrabold text-white text-xxl'>Client Retention Rate</p>
+  </div>
+</div>
 
-          {/* Third Block */}
-          <div className='flex flex-col items-center'>
-            <div className='flex flex-col p-4 h-fit w-fit shadow-md rounded-full bg-green-700'>
-              <RiVerifiedBadgeLine size={80} color='white' className='rounded-full p-1' />
-            </div>
-            <div className='text-center space-y-2'>
-              <p className='font-extrabold text-white text-5xl'>500 +</p>
-              <p className='font-extrabold text-white text-xxl'>Projects Completed</p>
-            </div>
-          </div>
+{/* Third Block */}
+<div className='flex flex-col items-center'>
+  <div className='flex flex-col p-4 h-fit w-fit shadow-md rounded-full bg-green-700'>
+    <RiVerifiedBadgeLine size={70} color='white' className='rounded-full p-1' />
+  </div>
+  <div className='text-center space-y-2 ml-2 mt-4'>
+    <p className='font-extrabold text-white text-4xl'>{projectsCompleted}+</p>
+    <p className='font-extrabold text-white text-xxl'>Projects Completed</p>
+  </div>
+</div>
 
-          {/* Fourth Block */}
-          <div className='flex flex-col items-center'>
-            <div className='flex flex-col p-4 h-fit w-fit shadow-md rounded-full bg-green-700'>
-              <FaThumbsUp size={80} color='white' className='rounded-full p-1' />
-            </div>
-            <div className='text-center space-y-2'>
-              <p className='font-extrabold text-white text-5xl'>300+</p>
-              <p className='font-extrabold text-white text-xxl'>Happy Clients</p>
-            </div>
-          </div>
+{/* Fourth Block */}
+<div className='flex flex-col items-center'>
+  <div className='flex flex-col p-4 h-fit w-fit shadow-md rounded-full bg-green-700'>
+    <FaThumbsUp size={70} color='white' className='rounded-full p-1' />
+  </div>
+  <div className='text-center space-y-2 ml-2 mt-4'>
+    <p className='font-extrabold text-white text-4xl'>{happyClients}+</p>
+    <p className='font-extrabold text-white text-xxl'>Happy Clients</p>
+  </div>
+</div>
+
 
         </div>
       </div>
