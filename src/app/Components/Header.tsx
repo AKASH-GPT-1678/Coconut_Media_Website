@@ -4,7 +4,6 @@ import Image from 'next/image'
 import Logo from "./mylogo.png"
 import { MdAddCall } from "react-icons/md";
 import { motion } from "framer-motion"
-import Groupd from "../../../public/groupd.png"
 import { useRouter } from 'next/navigation';
 import { MyImages } from '../myasset/myprofile';
 import { Companies } from '../myasset/companies/comapnies';
@@ -17,9 +16,10 @@ export const Header = () => {
   const router = useRouter();
 
   const Myurls = [
-    'https://res.cloudinary.com/dffepahvl/image/upload/v1753674037/vcvakjnpq3omqzrsryt5.webp',
-    'https://res.cloudinary.com/dffepahvl/image/upload/v1750699353/mxgjxnlow8psctxamuo9.png',
-    'https://res.cloudinary.com/dffepahvl/image/upload/v1750699353/mxgjxnlow8psctxamuo9.png'
+
+    'https://storage.googleapis.com/mangementbkt/teamimage.jpg',
+    'https://storage.googleapis.com/mangementbkt/teamimage2.webp',
+    'https://storage.googleapis.com/mangementbkt/teamimage3.webp'
 
   ]
 
@@ -36,7 +36,7 @@ export const Header = () => {
 
       }
       else {
-        // current + 1
+        current++
         setSource(Myurls[current])
 
 
@@ -58,7 +58,7 @@ export const Header = () => {
 
 
 
-  }, [])
+  })
 
   const services = [
     {
@@ -105,7 +105,7 @@ export const Header = () => {
 
     <div>
 
-      <div style={{ backgroundImage: `url(${source})`, backdropFilter: 'blur(5px)', backgroundSize: 'cover', backfaceVisibility: 'hidden' }}>
+      <motion.div style={{ backgroundImage: `url(${source})`, backdropFilter: 'blur(5px)', backgroundSize: 'cover', backfaceVisibility: 'hidden', backgroundBlendMode: "multiply" }} className='bg-gray-400  '>
 
         <div className='flex flex-row gap-5  h-fit 0 p-8 items-center justify-between'>
 
@@ -181,7 +181,7 @@ export const Header = () => {
 
         </div>
 
-      </div>
+      </motion.div>
       <div>
         {/* <div className='h-full w-screen flex flex-col space-y-5 md:flex-row mb-20  '>
           <div className=' flex flex-col h-[600px] md:flex-row relative min-w-[50%]  max-w-[800px] '>
