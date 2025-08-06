@@ -13,18 +13,6 @@ const Infopart = () => {
   const [projectsCompleted, setProjectsCompleted] = React.useState(0);
   const [happyClients, setHappyClients] = React.useState(0);
 
-  const upgradeWeb = (
-    yearsMax: number,
-    clientRateMax: number,
-    projectsMax: number,
-    clientsMax: number
-  ) => {
-
-
-
-  }
-
-
 
 
 

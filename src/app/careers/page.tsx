@@ -51,9 +51,9 @@ const page = () => {
                   <div className='flex flex-row gap-2 justify-between'>
 
                     <div className='flex flex-row gap-2'>
-                    <p className="after:content-['_of_experience']">{item.experience}</p>
-                    <FaClock size={20} />
-                    <p>{item.type}</p>
+                      <p className="after:content-['_of_experience']">{item.experience}</p>
+                      <FaClock size={20} />
+                      <p>{item.type}</p>
                     </div>
                     <div>
                       <p className="after:content-['>>'] text-lg cursor-pointer">Apply Now</p>
@@ -85,8 +85,8 @@ const page = () => {
       </div>
 
       <div>
-        <Footer1/>
-        <Footer/>
+        <Footer1 />
+        <Footer />
       </div>
     </div>
   )

@@ -183,9 +183,9 @@ export const Header = () => {
 
       </div>
       <div>
-        <div className='h-full w-screen flex flex-col space-y-5 md:flex-row mb-20  '>
+        {/* <div className='h-full w-screen flex flex-col space-y-5 md:flex-row mb-20  '>
           <div className=' flex flex-col h-[600px] md:flex-row relative min-w-[50%]  max-w-[800px] '>
-            <div className='absolute bg-green-100 w-full  md:w-[70%] h-[400px] md:h-full '>
+            <div className='absolute bg-green-100 w-screen  md:w-[70%] h-[400px] md:h-full '>
 
             </div>
 
@@ -232,7 +232,7 @@ export const Header = () => {
 
 
 
-        </div>
+        </div> */}
 
 
       </div>
