@@ -6,8 +6,8 @@ import { MdAddCall } from "react-icons/md";
 import { motion } from "framer-motion"
 import { useRouter } from 'next/navigation';
 import { MyImages } from '../myasset/myprofile';
-import { Companies } from '../myasset/companies/comapnies';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { Companies } from '../myasset/companies/comapnies';
 import { FaPencilRuler } from "react-icons/fa";
 import { FaComputer } from "react-icons/fa6";
 import { TbBuildingCircus } from "react-icons/tb";
@@ -105,7 +105,7 @@ export const Header = () => {
 
     <div>
 
-      <motion.div style={{ backgroundImage: `url(${source})`, backdropFilter: 'blur(5px)', backgroundSize: 'cover', backfaceVisibility: 'hidden', backgroundBlendMode: "multiply" }} className='bg-gray-400  '>
+      <motion.div style={{ backgroundImage: `url(${source})`, backdropFilter: 'blur(5px)', backgroundSize: 'cover', backfaceVisibility: 'hidden', backgroundBlendMode: "multiply" }} className='bg-gray-400 min-h-screen '>
 
         <div className='flex flex-row gap-5  h-fit 0 p-8 items-center justify-between'>
 
@@ -114,17 +114,27 @@ export const Header = () => {
 
           <div className='flex flex-row  '>
             <Image src={Logo} alt="logo" width={120} height={120} />
-
-            <ul className='flex flex-row gap-14 text-white ml-12'>
-              <li className="uppercase cursor-pointer" onClick={() => router.push('/')}>Home</li>
-              <li className="uppercase cursor-pointer">About us</li>
-              <li className="uppercase cursor-pointer">Verticles</li>
-              <li className="uppercase cursor-pointer" onClick={() => router.push('/blogs')}>Blog</li>
-              <li className="uppercase cursor-pointer" onClick={() => router.push('/careers')}>Careers</li>
-
-              <li className="uppercase cursor-pointer" onClick={() => router.push('/contactus')}>Contact</li>
-
+            <ul className='flex-row hidden md:flex gap-6 text-white ml-12'>
+              <li className="uppercase cursor-pointer text-sm font-bold" onClick={() => router.push('/')}>
+                Home
+              </li>
+              <li className="uppercase cursor-pointer text-sm font-bold flex-row" onClick={() => router.push('/about')}>
+                About Us
+              </li>
+              <li className="uppercase cursor-pointer text-sm font-bold" onClick={() => router.push('/verticles')}>
+                Verticles
+              </li>
+              <li className="uppercase cursor-pointer text-sm font-bold" onClick={() => router.push('/blogs')}>
+                Blog
+              </li>
+              <li className="uppercase cursor-pointer text-sm font-bold" onClick={() => router.push('/careers')}>
+                Careers
+              </li>
+              <li className="uppercase cursor-pointer text-sm font-bold" onClick={() => router.push('/contactus')}>
+                Contact
+              </li>
             </ul>
+
           </div>
           <div className='flex flex-row items-center gap-2'>
             <MdAddCall className='text-white text-3xl' />
@@ -324,17 +334,21 @@ export const Header = () => {
           </div>
 
           <div className="flex flex-row flex-wrap gap-5 max-w-[1200px] justify-center">
-            <Image src={MyImages[0]} alt="image1" className="object-fill h-[300px] w-[250px]" />
-            <Image src={MyImages[1]} alt="image2" className="object-fill h-[300px] w-[250px]" />
-            <Image src={MyImages[2]} alt="image3" className="object-fill h-[300px] w-[250px]" />
-            <Image src={MyImages[3]} alt="image4" className="object-fill h-[300px] w-[250px]" />
-            <Image src={MyImages[4]} alt="image5" className="object-fill h-[300px] w-[250px]" />
-            <Image src={MyImages[5]} alt="image6" className="object-fill h-[300px] w-[250px]" />
-            <Image src={MyImages[6]} alt="image7" className="object-fill h-[300px] w-[520px]" />
-            <Image src={MyImages[7]} alt="image8" className="object-fill h-[300px] w-[250px]" />
-            <Image src={MyImages[8]} alt="image9" className="object-fill h-[300px] w-[250px]" />
-            <Image src={MyImages[9]} alt="image10" className="object-fill h-[300px] w-[250px]" />
-
+            {MyImages.map((src, index) => (
+              <motion.div
+                key={index}
+                initial={{ scale: 0.8, opacity: 0 }}
+                animate={{ scale: 1, opacity: 1 }}
+                transition={{ duration: 0.5, delay: index * 0.1, ease: "easeOut" }}
+              >
+                <Image
+                  src={src}
+                  alt={`image${index + 1}`}
+                  className={`object-fill h-[300px] ${index === 6 ? "w-[520px]" : "w-[250px]"
+                    } shadow-lg`}
+                />
+              </motion.div>
+            ))}
           </div>
         </div>
 
