@@ -54,21 +54,24 @@ export const Blogs = [
     "date": "8 APR",
     "category": "Blogs & Articles",
     "description": "Artificial Intelligence (AI) is a foundational component of modern-day technology, reshaping all facets of our lives from work to...",
-    "imageUrl": "https://res.cloudinary.com/dffepahvl/image/upload/v1753692201/fbp1mriss5bshnjbddxm.jpg"
+    "imageUrl": "https://res.cloudinary.com/dffepahvl/image/upload/v1753692201/fbp1mriss5bshnjbddxm.jpg",
+    "route": '/whos-coming-for-chatgpts-throne-in-the-age-of-ai'
   },
   {
     "title": "WHY CREATIVITY IS THE SECRET INGREDIENT IN SUCCESSFUL...",
     "date": "5 APR",
     "category": "Blogs & Articles",
     "description": "The competitive landscape of creative advertising is perpetually fast-paced; the trends evolve before you can apply them, an...",
-    "imageUrl": "https://res.cloudinary.com/dffepahvl/image/upload/v1753692201/bgug3m7runy2wh3cpuoh.jpg"
+    "imageUrl": "https://res.cloudinary.com/dffepahvl/image/upload/v1753692201/bgug3m7runy2wh3cpuoh.jpg",
+        "route": '/whos-coming-for-chatgpts-throne-in-the-age-of-ai'
   },
   {
     "title": "THE PSYCHOLOGY OF ADVERTISING: WHAT MAKES CONSUMERS SAY ‘YES’",
     "date": "1 APR",
     "category": "Blogs & Articles",
     "description": "Advertising may be described as the science of arresting the human intelligence long enough to get money from it.",
-    "imageUrl": "https://res.cloudinary.com/dffepahvl/image/upload/v1753692201/bl0l2nbqq3m4ydwjcrxu.jpg"
+    "imageUrl": "https://res.cloudinary.com/dffepahvl/image/upload/v1753692201/bl0l2nbqq3m4ydwjcrxu.jpg",
+        "route": '/whos-coming-for-chatgpts-throne-in-the-age-of-ai'
   }
 ]
 

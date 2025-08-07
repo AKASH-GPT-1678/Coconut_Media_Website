@@ -4,12 +4,15 @@ import { Blogs } from '../testimonial/testimonial'
 import Image from 'next/image'
 import { motion } from "framer-motion"
 import { FaFolderOpen } from "react-icons/fa";
+import { useRouter } from 'next/navigation'
+import { it } from 'node:test'
 export const BlogView = () => {
+  const router = useRouter();
   return (
     <div className='border-2 '>
       <div className='flex flex-col lg:flex-row gap-4 mt-10 items-center justify-center '>
         {Blogs.map((item, index) => (
-          <div key={index} className='w-[370px] h-[480px] rounded-2xl shadow-2xl'>
+          <div key={index} className='w-[370px] h-[480px] rounded-2xl shadow-2xl' onClick={() =>router.push(item.route) }>
             <div className='h-[50%] overflow-hidden'>
               <Image src={item.imageUrl} alt='myblogs' width={400} height={400} className='object-cover transition-transform duration-500 group-hover:scale-110' />
             </div>
@@ -48,7 +51,7 @@ export const BlogView = () => {
         </div>
 
         <div className='rounded-2xl'>
-          <p className='p-6 text-lg text-white bg-black rounded-xl uppercase cursor-pointer'> Start Your story with us</p>
+          <p className='p-6 text-lg text-white bg-black rounded-xl uppercase cursor-pointer' onClick={()=> window.location.href="/contactus"}> Start Your story with us</p>
         </div>
 
 

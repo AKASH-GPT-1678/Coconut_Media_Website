@@ -51,12 +51,12 @@ export const Header = () => {
 
 
     const interval = setInterval(() => {
-   
+
       if (scroll < 6) {
         scroll++;
         companyRef.current?.scrollBy(100, 100)
         console.log(scroll)
-         
+
       }
 
       else {
@@ -65,7 +65,7 @@ export const Header = () => {
           companyRef.current?.scrollBy(-100, -100);
           scroll2++
           console.log(scroll2)
-             
+
         }
         else {
           scroll = 0;
@@ -202,9 +202,9 @@ export const Header = () => {
 
 
             >
-              <h1 className='text-8xl text-white'>CRAFTING CAMPAIGNS</h1>
-              <h1 className='text-8xl text-white'>CREATING EVENTS</h1>
-              <h1 className='text-8xl text-white'>CREATING MAGIC</h1>
+              <h1 className='text-4xl md:text-6xl xl:text-8xl text-white'>CRAFTING CAMPAIGNS</h1>
+              <h1 className='text-4xl md:text-6xl xl:text-8xl text-white'>CREATING EVENTS</h1>
+              <h1 className='text-4xl md:text-6xl xl:text-8xl text-white'>CREATING MAGIC</h1>
 
 
             </motion.div>
@@ -288,7 +288,7 @@ export const Header = () => {
           <p className="text-5xl font-semibold">Our Esteemed Clients</p>
 
 
-          <div className='flex flex-row overflow-x-auto gap-10 max-w-[800px] justify-center mt-10 scrollbar-hide' ref={companyRef}>
+          <div className='flex flex-row overflow-x-auto gap-10 max-w-[1000px] justify-center mt-10 scrollbar-hide' ref={companyRef}>
             {Companies.map((company, index) => (
               <Image
                 key={index}
