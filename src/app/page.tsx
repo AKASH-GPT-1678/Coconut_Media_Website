@@ -12,8 +12,12 @@ export default function Home() {
       <Header />
 
       <KnowAboutUs />
+      {/* <div className="mt-[-20]"> */}
       <Infopart />
-      <Visionpart />
+
+      {/* </div> */}
+
+
       <BlogView />
       <Footer1 />
       <Footer />

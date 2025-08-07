@@ -23,42 +23,69 @@ export const Header = () => {
 
   ]
 
-  const [source, setSource] = React.useState(Myurls[0])
+  const [source, setSource] = React.useState(Myurls[0]);
+  const companyRef = React.useRef<HTMLDivElement>(null);
 
 
   React.useEffect(() => {
-    let current = 0
+    let current = 0;
+
+    const interval = setInterval(() => {
+      if (current === 2) {  // <-- Correct comparison
+        current = 0;
+
+      } else {
+        current++;
+      }
+      setSource(Myurls[current]);
+    }, 3000);
+
+    return () => clearInterval(interval);
+  }, []);
+
+  React.useEffect(() => {
+    let scroll = 0;
+    let scroll2 = 0;
+
+
 
 
     const interval = setInterval(() => {
-      if (current = 2) {
-        current = 0
-
+   
+      if (scroll < 6) {
+        scroll++;
+        companyRef.current?.scrollBy(100, 100)
+        console.log(scroll)
+         
       }
+
       else {
-        current++
-        setSource(Myurls[current])
 
-
+        if (scroll2 < scroll) {
+          companyRef.current?.scrollBy(-100, -100);
+          scroll2++
+          console.log(scroll2)
+             
+        }
+        else {
+          scroll = 0;
+          scroll2 = 0;
+          console.log("iam running")
+        }
+        console.log(scroll2)
       }
 
 
-    }, 3000
-    )
 
+
+    }, 1000);
 
     return () => clearInterval(interval);
+  }, []);
 
 
 
 
-
-
-
-
-
-
-  })
 
   const services = [
     {
@@ -193,56 +220,7 @@ export const Header = () => {
 
       </motion.div>
       <div>
-        {/* <div className='h-full w-screen flex flex-col space-y-5 md:flex-row mb-20  '>
-          <div className=' flex flex-col h-[600px] md:flex-row relative min-w-[50%]  max-w-[800px] '>
-            <div className='absolute bg-green-100 w-screen  md:w-[70%] h-[400px] md:h-full '>
 
-            </div>
-
-            <div className='mt-20  p-5 md:ml-16'>
-              <Image src={Groupd} alt="logo" width={800} height={800} className='absolute  h-[500px] w-[500px]  md:w-[800px]  rounded-2xl ' />
-
-            </div>
-          </div>
-
-
-
-          <div className=' w-[100%] md:w-[50%] bg-white h-[100%] md:ml-20 mt-10 '>
-            <section className="px-6 py-12 md:py-16 bg-white w-full md:w-fit min-w-[400px]">
-              <div className="max-w-3xl mx-auto">
-                <p className="text-sm uppercase tracking-wider text-gray-500 mb-2">About Us</p>
-                <h2 className="text-3xl md:text-4xl font-bold text-black leading-snug mb-6">
-                  DREAMERS, MAKERS,
-                  STORYTELLERS AND<br />
-                  CREATORS
-                </h2>
-                <p className="text-green-500 text-base font-medium leading-relaxed mb-4">
-                  We specialise in creating campaigns<br />
-                  that elevate your brand and deliver<br />
-                  quantifiable results.
-                </p>
-                <p className="text-gray-700 text-sm max-w-xl leading-relaxed">
-                  We serve diverse media and entertainment needs, expanding across Creative Brand Solutions,
-                  Digital Marketing, Motion Pictures, Events, and more, with an exponentially growing client base.
-                </p>
-
-              </div>
-
-            </section>
-
-
-
-
-          </div>
-          <div>
-            <h1 className=' rotate-90 origin-top-left text-5xl md:text-8xl xl:text-9xl text-green-200 xl:ml-40 mt-10 font-cursive'>COCONUT</h1>
-          </div>
-
-
-
-
-
-        </div> */}
 
 
       </div>
@@ -305,18 +283,18 @@ export const Header = () => {
       <div className="w-full flex flex-col items-center justify-center bg-white">
 
         {/* Esteemed Clients Section */}
-        <div className="w-full flex flex-col items-center justify-center py-10 border-b-2 border-gray-300">
+        <div className="w-full flex flex-col items-center justify-center py-10 border-b-2 border-gray-300 ">
           <p>They trusted us. You can as well.</p>
           <p className="text-5xl font-semibold">Our Esteemed Clients</p>
 
 
-          <div className='flex flex-row flex-wrap gap-5 max-w-[1200px] justify-center mt-10'>
+          <div className='flex flex-row overflow-x-auto gap-10 max-w-[800px] justify-center mt-10 scrollbar-hide' ref={companyRef}>
             {Companies.map((company, index) => (
               <Image
                 key={index}
                 src={company}
                 alt={"tasiwr"}
-                className="object-contain h-[100px] w-[200px] p-4"
+                className="object-contain h-[200px] w-[200px] p-8"
               />
             ))}
           </div>

@@ -6,8 +6,9 @@
 @custom-variant dark (&:is(.dark *));
 
 
+
 @theme {
-  --font-display: "Edu NSW ACT Hand Pre", "cursive"; 
+  --font-display: "Edu NSW ACT Hand Pre", "cursive";
 }
 
 @theme inline {
@@ -48,6 +49,10 @@
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
   --radius-xl: calc(var(--radius) + 4px);
+  /* --webkit-scrollbar {
+    display: none;
+    
+  } */
 }
 
 :root {
@@ -123,7 +128,17 @@
   * {
     @apply border-border outline-ring/50;
   }
+
   body {
     @apply bg-background text-foreground;
+
+
   }
+}
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
 }
