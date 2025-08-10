@@ -11,9 +11,9 @@ export const Footer1 = () => {
     
         <div className='flex flex-row bg-black p-5 items-center justify-center mt-3'>
             <div className='flex flex-row justify-between gap-5'>
-                <Image src={Image1} alt='mylogo' width={200} height={200} className='object-cover' />
+                <Image src={Image1} alt='mylogo' width={200} height={200} className='object-cover hidden md:block' />
                 <h1 className='uppercase text-sm mt-3 text-white'>Choose tailored services crafted exclusively for your business <span className='uppercase'>Discover your profile solution</span></h1>
-                <div className='flex flex-row gap-5'>
+                <div className='flex flex-row gap-5 mt-5'>
                     <FaFacebook size={30} className='text-white cursor-pointer' />
                     <FaInstagram size={30} className='text-white cursor-pointer' />
                     <FaLinkedin size={30} className='text-white cursor-pointer' />

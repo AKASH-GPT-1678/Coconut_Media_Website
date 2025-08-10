@@ -288,7 +288,7 @@ export const Header = () => {
           <p className="text-5xl font-semibold">Our Esteemed Clients</p>
 
 
-          <div className='flex flex-row overflow-x-auto gap-10 max-w-[1000px] justify-center mt-10 scrollbar-hide' ref={companyRef}>
+          <div className='flex flex-row w-fit overflow-x-auto md:gap-10 lg:max-w-[1000px] justify-center mt-10 scrollbar-hide' ref={companyRef}>
             {Companies.map((company, index) => (
               <Image
                 key={index}

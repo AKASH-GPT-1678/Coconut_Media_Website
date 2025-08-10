@@ -63,7 +63,7 @@ export const Blogs = [
     "category": "Blogs & Articles",
     "description": "The competitive landscape of creative advertising is perpetually fast-paced; the trends evolve before you can apply them, an...",
     "imageUrl": "https://res.cloudinary.com/dffepahvl/image/upload/v1753692201/bgug3m7runy2wh3cpuoh.jpg",
-        "route": '/whos-coming-for-chatgpts-throne-in-the-age-of-ai'
+        "route": '/why-creativity-is-the-secret-ingredient-in-successful-advertising'
   },
   {
     "title": "THE PSYCHOLOGY OF ADVERTISING: WHAT MAKES CONSUMERS SAY ‘YES’",
@@ -71,7 +71,7 @@ export const Blogs = [
     "category": "Blogs & Articles",
     "description": "Advertising may be described as the science of arresting the human intelligence long enough to get money from it.",
     "imageUrl": "https://res.cloudinary.com/dffepahvl/image/upload/v1753692201/bl0l2nbqq3m4ydwjcrxu.jpg",
-        "route": '/whos-coming-for-chatgpts-throne-in-the-age-of-ai'
+        "route": '/the-psychology-of-advertising-what-makes-consumers-say-yes'
   }
 ]
 

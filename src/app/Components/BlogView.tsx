@@ -51,7 +51,7 @@ export const BlogView = () => {
         </div>
 
         <div className='rounded-2xl'>
-          <p className='p-6 text-lg text-white bg-black rounded-xl uppercase cursor-pointer' onClick={()=> window.location.href="/contactus"}> Start Your story with us</p>
+          <p className='p-3  lg:p-6 text-lg text-white bg-black rounded-xl uppercase cursor-pointer' onClick={()=> window.location.href="/contactus"}> Start Your story with us</p>
         </div>
 
 
