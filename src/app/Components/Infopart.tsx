@@ -151,4 +151,4 @@ const Infopart = () => {
   )
 }
 
-export default Infopart
+export default Infopart;

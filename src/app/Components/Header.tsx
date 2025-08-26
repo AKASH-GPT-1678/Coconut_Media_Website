@@ -305,7 +305,7 @@ export const Header = () => {
           <p>Explore our craft shaped with passion</p>
           <h1 className="text-4xl font-bold">Work Showcase</h1>
 
-          <div className="flex flex-row gap-10 font-semibold cursor-pointer mt-4 mb-10">
+          <div className="flex flex-row gap-8 ml-3 font-semibold cursor-pointer mt-4 mb-10 ">
             <p className="hover:underline">Creative Solutions</p>
             <p className="hover:underline">Digital Solutions</p>
             <p className="hover:underline">Events & Activations</p>

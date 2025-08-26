@@ -12,7 +12,7 @@ export const BlogView = () => {
     <div className='border-2 '>
       <div className='flex flex-col lg:flex-row gap-4 mt-10 items-center justify-center '>
         {Blogs.map((item, index) => (
-          <div key={index} className='w-[370px] h-[480px] rounded-2xl shadow-2xl' onClick={() =>router.push(item.route) }>
+          <div key={index} className='w-[370px] h-[480px] rounded-2xl shadow-2xl' onClick={() => router.push(item.route)}>
             <div className='h-[50%] overflow-hidden'>
               <Image src={item.imageUrl} alt='myblogs' width={400} height={400} className='object-cover transition-transform duration-500 group-hover:scale-110' />
             </div>
@@ -37,9 +37,9 @@ export const BlogView = () => {
       </div>
 
       <motion.div
-        className='flex flex-col lg:flex-row items-center gap-4 justify-between max-w-[1200px] h-[250px] mt-10 p-10 bg-green-500 mx-auto rounded-xl'
-        initial={{ opacity: 0, y: 80 }}          // start hidden and below
-        animate={{ opacity: 1, y: 0 }}           // animate to visible and in place
+        className='flex flex-col lg:flex-row items-center gap-4 justify-between max-w-[1200px] sm:h-[350px] md:h-[250px] mt-10 p-10 bg-green-500 mx-auto rounded-xl'
+        initial={{ opacity: 0, y: 80 }}          
+        animate={{ opacity: 1, y: 0 }}         
         transition={{ duration: 0.6, ease: 'easeOut' }} // smooth animation
       >
 
@@ -51,7 +51,7 @@ export const BlogView = () => {
         </div>
 
         <div className='rounded-2xl'>
-          <p className='p-3  lg:p-6 text-lg text-white bg-black rounded-xl uppercase cursor-pointer' onClick={()=> window.location.href="/contactus"}> Start Your story with us</p>
+          <p className='p-3 text-sm font-bold  lg:p-6   text-white bg-black rounded-xl uppercase cursor-pointer' onClick={() => window.location.href = "/contactus"}> Start Your story with us</p>
         </div>
 
 
