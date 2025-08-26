@@ -12,7 +12,7 @@ export default function Home() {
       <Header />
 
       <KnowAboutUs />
-      {/* <div className="mt-[-20]"> */}
+
       <Infopart />
 
 

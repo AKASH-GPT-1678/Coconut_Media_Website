@@ -226,21 +226,21 @@ export const Header = () => {
       </div>
       <div className='bg-black'>
         <div className='max-w-7xl mx-auto py-12 px-4'>
-          <div className='flex flex-row justify-between'>
+          <div className='flex flex-col md:flex-row justify-between gap-10'>
             <div className='flex flex-col text-white'>
               <p className='font-stretch-75% underline decoration-green-400 p-1 mb-2'>OUR SERVICES</p>
-              <p className='text-4xl'>WHAT WE OFFER</p>
+              <p className='text-2xl md:text-4xl'>WHAT WE OFFER</p>
 
             </div>
-            <div className='max-w-[600px]'>
-              <span className='text-white mt-6 md:text-lg'>
+            <div className='max-w-[600px] flex justify-center'>
+              <span className='text-white mt-6  md:text-lg'>
                 From ad films and dynamic campaigns to unforgettable event management, based in Mumbai and Ahmedabad, we bring your vision to life with creativity and precision.
               </span>
             </div>
 
           </div>
           <div>
-            <div className="bg-black text-white py-12 px-2">
+            <div className="bg-black text-white py-12 px-2 ">
               <div className="max-w-7xl mx-auto flex flex-col lg:flex-row justify-between gap-10">
                 {services.map((section, index) => (
                   <div key={index} className="w-full lg:w-1/3">
@@ -280,9 +280,9 @@ export const Header = () => {
         </div>
 
       </div>
-      <div className="w-full flex flex-col items-center justify-center bg-white">
+      <div className="max-w-screen flex flex-col items-center justify-center bg-white">
 
-        {/* Esteemed Clients Section */}
+
         <div className="w-full flex flex-col items-center justify-center py-10 border-b-2 border-gray-300 ">
           <p>They trusted us. You can as well.</p>
           <p className="text-5xl font-semibold">Our Esteemed Clients</p>
