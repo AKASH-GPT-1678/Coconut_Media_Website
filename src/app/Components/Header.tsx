@@ -285,10 +285,10 @@ export const Header = () => {
 
         <div className="w-full flex flex-col items-center justify-center py-10 border-b-2 border-gray-300 ">
           <p>They trusted us. You can as well.</p>
-          <p className="text-5xl font-semibold">Our Esteemed Clients</p>
+          <p className="text-2xl md:text-5xl font-semibold">Our Esteemed Clients</p>
 
 
-          <div className='flex flex-row w-fit overflow-x-auto md:gap-10 lg:max-w-[1000px] justify-center mt-10 scrollbar-hide' ref={companyRef}>
+          <div className='flex flex-row w-fit overflow-x-auto md:gap-10 max-w-screen justify-center mt-10 scrollbar-hide' ref={companyRef}>
             {Companies.map((company, index) => (
               <Image
                 key={index}
