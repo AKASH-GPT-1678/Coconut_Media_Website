@@ -1,7 +1,12 @@
 // pages/blog.js or inside any component
+import Image from "next/image";
 export default function Blog() {
     return (
         <div className="p-6 space-y-6 max-w-[800px]">
+                        <div className='flex '>
+                            <Image src={'https://res.cloudinary.com/dffepahvl/image/upload/v1753692201/fbp1mriss5bshnjbddxm.jpg'} alt='mylogo' width={500} height={500} className='h-[400px] w-[500px] lg:h-[400px] lg:w-[600px]' />
+                        </div>
+            
             <h5 className="text-4xl font-bold">Artificial Intelligence: A Modern Revolution</h5>
             <p>
                 Artificial Intelligence (AI) is a foundational component of modern-day technology, re-shaping all facets of our lives

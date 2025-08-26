@@ -13,7 +13,7 @@ const page = () => {
     const router = useRouter();
     return (
         <div>
-            <div className='w-full h-[400px]' style={{ backgroundImage: "url('https://meat-bucket-2025.s3.ap-south-1.amazonaws.com/cocoasset/body-brain.jpg')", backgroundSize: "cover" }} >
+            <div className='w-full h-[400px]' style={{ backgroundImage: "url('https://res.cloudinary.com/dffepahvl/image/upload/v1753692201/bgug3m7runy2wh3cpuoh.jpg')", backgroundSize: "cover" }} >
                 <div className='flex flex-row gap-5  h-fit 0 p-8 items-center justify-between'>
 
 

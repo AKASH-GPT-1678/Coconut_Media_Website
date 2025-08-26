@@ -4,7 +4,7 @@ export default function CreativeBlog() {
     return (
         <div className="p-6 space-y-6 max-w-[800px]">
             <div className='flex '>
-                <Image src={'https://meat-bucket-2025.s3.ap-south-1.amazonaws.com/cocoasset/body-brain.jpg'} alt='mylogo' width={500} height={500} className='h-[400px] w-[500px] lg:h-[400px] lg:w-[600px]' />
+                <Image src={'https://res.cloudinary.com/dffepahvl/image/upload/v1753692201/bgug3m7runy2wh3cpuoh.jpg'} alt='mylogo' width={500} height={500} className='h-[400px] w-[500px] lg:h-[400px] lg:w-[600px]' />
             </div>
             <h5 className="text-4xl font-bold">The Vital Role of Creativity in Advertising</h5>
             <p>
