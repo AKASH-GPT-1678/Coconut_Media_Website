@@ -176,37 +176,35 @@ export const Header = () => {
         <div className='h-screen w-full flex flex-row  justify-center' >
 
 
-          <div className='w-fit h-fit mt-40 p-10 max-w-[1200px] flex flex-col gap-10 items-center'>
+          <div className="flex flex-col items-center justify-center min-h-screen bg-transparent px-6 text-center">
 
-
+            {/* Top intro line */}
             <motion.div
-              initial={{ y: -50 }}
-              animate={{ y: 0 }}
+              initial={{ y: -50, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
               transition={{ duration: 0.75 }}
-
             >
-              <h1 className='text-xl font-semibold text-white'>Welcome to Coconut Media Group</h1>
-
-
-
-
+              <h1 className="text-xl md:text-2xl font-semibold text-white">
+                Welcome to Coconut Media Group
+              </h1>
             </motion.div>
-            <motion.div className='flex flex-col items-center max-w-[1200px]  '
 
-              initial={{ y: 200 }} // start 50px above
-              animate={{ y: 0 }}
-              transition={{ duration: 0.75 }}
-
-
-
-
-
+            {/* Main Hero Text */}
+            <motion.div
+              className="flex flex-col items-center gap-4 mt-8"
+              initial={{ y: 50, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              transition={{ duration: 0.75, delay: 0.3 }}
             >
-              <h1 className='text-4xl md:text-6xl xl:text-8xl text-white'>CRAFTING CAMPAIGNS</h1>
-              <h1 className='text-4xl md:text-6xl xl:text-8xl text-white'>CREATING EVENTS</h1>
-              <h1 className='text-4xl md:text-6xl xl:text-8xl text-white'>CREATING MAGIC</h1>
-
-
+              <h1 className="text-4xl md:text-6xl xl:text-8xl font-bold text-white">
+                CRAFTING CAMPAIGNS
+              </h1>
+              <h1 className="text-4xl md:text-6xl xl:text-8xl font-bold text-white">
+                CREATING EVENTS
+              </h1>
+              <h1 className="text-4xl md:text-6xl xl:text-8xl font-bold text-white">
+                CREATING MAGIC
+              </h1>
             </motion.div>
           </div>
 
@@ -300,7 +298,7 @@ export const Header = () => {
           </div>
         </div>
 
-        {/* Work Showcase Section */}
+
         <div className="w-full flex flex-col items-center justify-center py-10">
           <p>Explore our craft shaped with passion</p>
           <h1 className="text-4xl font-bold">Work Showcase</h1>
