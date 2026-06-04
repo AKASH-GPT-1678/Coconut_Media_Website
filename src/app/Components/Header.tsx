@@ -17,9 +17,9 @@ export const Header = () => {
 
   const Myurls = [
 
-    'https://storage.googleapis.com/mangementbkt/teamimage.jpg',
-    'https://storage.googleapis.com/mangementbkt/teamimage2.webp',
-    'https://storage.googleapis.com/mangementbkt/teamimage3.webp'
+    'https://res.cloudinary.com/dffepahvl/image/upload/v1780595487/hbeh4tq1lpq3q3vcydrh.jpg',
+    'https://res.cloudinary.com/dffepahvl/image/upload/v1780595578/sqym0ltqpkpy7ixzx5pi.jpg',
+    'https://res.cloudinary.com/dffepahvl/image/upload/v1780595639/pfc14idxnzou5pamz560.jpg'
 
   ]
 
